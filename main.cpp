@@ -32,8 +32,9 @@ void apply_commands(vector<string> &vector, int field_num, string fiels_command)
                 
             }
             else if (fiels_command[0] == 'R') {
-                cout << "TODO: need to implement replace" << endl;
-                
+                char in_symbol = fiels_command[1];
+                char out_symbol = fiels_command[2];
+                replace( str.begin(), str.end(), in_symbol, out_symbol);
             }
             else {
                 cout << "Error bad argument in command" << endl;
