@@ -51,6 +51,7 @@ int main(int argc, const char * argv[]) {
     string file_field;
     char file_char;
     
+    // this vector hold all the words in file with the number of it's field in the beginning of string
     vector<string> field_vector;
     
     ifstream file(file_name);
@@ -97,7 +98,7 @@ int main(int argc, const char * argv[]) {
         return 0;
     }
     
-    // now apply all the commands
+    // now apply all the changes that specified in commands
     for (int i = 2; i <= argc - 1; i++) {
         command = argv[i];
         int field_num = command[0] - '0';
